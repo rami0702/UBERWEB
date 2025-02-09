@@ -1,0 +1,144 @@
+body {
+    background-image: url('https://scontent-dus1-1.xx.fbcdn.net/v/t39.30808-6/302763380_514536423942724_8003227205248747218_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=djxH6tN-fXkQ7kNvgFIs-8u&_nc_oc=AdhI6r13_7IpbfcuveV5lJzHW1zkl3A14inDpOwrTcnvxA-0xkAtD82wh4yKcGhHeI6KJN3tt07FtEhFADCVQ9ao&_nc_zt=23&_nc_ht=scontent-dus1-1.xx&_nc_gid=AviOsFLi_KG9sNwjYZjBtSd&oh=00_AYCXQa_r9_D256g3NmEG3D6SyApM1LxRt6kM7NFlNtqOLQ&oe=67AECD57');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+#booking {
+    margin: 20px auto;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#calendar {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.contact-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2);
+}
+
+.translation-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.translation-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #FFD700; /* لون ذهبي مميز */
+}
+
+.translation-info p {
+    font-size: 18px;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.contact-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+}
+
