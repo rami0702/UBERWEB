@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             element.innerHTML = element.getAttribute(`data-${currentLang}`);
         });
 
-        // تغيير الأيقونة على الزر
+        // تغيير أيقونة الزر
         langToggleBtn.innerHTML = currentLang === "de" ? "🇩🇪 / 🇸🇦" : "🇸🇦 / 🇩🇪";
     });
 });
