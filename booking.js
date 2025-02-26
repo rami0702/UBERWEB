@@ -1,38 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let calendarEl = document.getElementById("calendar");
-    let storedAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    const bookingForm = document.getElementById("booking-form");
 
-    let calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: "dayGridMonth",
-        selectable: false,
-        locale: "de",
-        events: storedAppointments,
-    });
+    if (bookingForm) {
+        bookingForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-    calendar.render();
-});
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
 
-function bookAppointment() {
-    let date = document.getElementById("appointmentDate").value;
-    let time = document.getElementById("appointmentTime").value;
+            if (!name || !email || !date || !time) {
+                alert("Bitte alle Felder ausfüllen!");
+                return;
+            }
 
-    if (!date || !time) {
-        alert("يرجى اختيار التاريخ والوقت للحجز.");
-        return;
+            const appointment = { name, email, date, time };
+            let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+            appointments.push(appointment);
+
+            localStorage.setItem("appointments", JSON.stringify(appointments));
+
+            alert("Termin erfolgreich gebucht!");
+            bookingForm.reset();
+        });
     }
-
-    let storedAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
-
-    let newAppointment = {
-        title: "موعد محجوز ⏳",
-        start: `${date}T${time}`,
-        allDay: false,
-    };
-
-    storedAppointments.push(newAppointment);
-    localStorage.setItem("appointments", JSON.stringify(storedAppointments));
-
-    alert("تم حجز الموعد بنجاح!");
-
-    location.reload(); // تحديث الصفحة لعرض الموعد في التقويم
-}
+});

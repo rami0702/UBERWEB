@@ -118,3 +118,57 @@ button:hover {
         width: 100%;
     }
 }
+
+
+/* تحسين التصميم للهواتف */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #welcome h1 {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .translation-info {
+        width: 90%;
+    }
+
+    .contact-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* تحسين التصميم لأجهزة الكمبيوتر */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    #welcome h1 {
+        font-size: 28px;
+    }
+
+    .translation-info {
+        width: 70%;
+    }
+
+    .contact-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
+

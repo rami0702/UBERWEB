@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,17 @@
     <header>
         <nav>
             <ul>
-                <li><a href="about.html" data-de="Über uns" data-ar="من نحن">Über uns</a></li>
-                <li><a href="services.html" data-de="Dienstleistungen" data-ar="الخدمات">Dienstleistungen</a></li>
-                <li><a href="contact.html" data-de="Kontakt" data-ar="الاتصال">Kontakt</a></li>
-                <li><a href="booking.html" data-de="Termin buchen" data-ar="حجز موعد">Termin buchen</a></li>
+                <li><a href="about.html" data-de="<span data-de="Über uns" data-ar="من نحن">Über uns</span>" data-ar="من نحن"><span data-de="Über uns" data-ar="من نحن">Über uns</span></a></li>
+                <li><a href="services.html" data-de="<span data-de="Dienstleistungen" data-ar="الخدمات">Dienstleistungen</span>" data-ar="الخدمات"><span data-de="Dienstleistungen" data-ar="الخدمات">Dienstleistungen</span></a></li>
+                <li><a href="contact.html" data-de="<span data-de="Kontakt" data-ar="الاتصال">Kontakt</span>" data-ar="الاتصال"><span data-de="Kontakt" data-ar="الاتصال">Kontakt</span></a></li>
+                <li><a href="booking.html" data-de="<span data-de="Termin buchen" data-ar="حجز موعد">Termin buchen</span>" data-ar="حجز موعد"><span data-de="Termin buchen" data-ar="حجز موعد">Termin buchen</span></a></li>
             </ul>
             <button id="language-toggle">🇩🇪 / 🇸🇦</button> <!-- زر تغيير اللغة -->
         </nav>
     </header>
 
     <section id="welcome">
+    <img id="cover-image" src="https://source.unsplash.com/1600x900/?translation,office,documents" alt="Übersetzungsbüro Cover" style="width:100%; border-radius: 10px; margin-top: 20px;">
         <h1 data-de="Willkommen im Übersetzungsbüro" data-ar="مرحبًا بكم في مكتب الترجمة">Willkommen im Übersetzungsbüro</h1>
         <p data-de="Wir bieten professionelle, zuverlässige und beglaubigte Übersetzungsdienste in Deutschland an." 
            data-ar="نحن نقدم خدمات ترجمة احترافية وموثوقة ومعتمدة في ألمانيا.">
@@ -65,6 +66,9 @@
            &copy; 2025 Alle Rechte vorbehalten | Übersetzungsbüro ...
         </p>
 
+        <!-- زر الصعود للأعلى -->
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" data-de="🔝 Nach oben" 
+                data-ar="🔝 إلى الأعلى">🔝 Nach oben</button>
     </footer>
 </body>
 </html>

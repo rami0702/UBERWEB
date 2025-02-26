@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>🔐 Admin Login</h2>
+        <input type="text" id="username" placeholder="Benutzername">
+        <input type="password" id="password" placeholder="Passwort">
+        <button onclick="login()">Login</button>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <script>
+        function login() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            // بيانات الدخول الصحيحة (يمكن تغييرها)
+            const correctUser = "admin";
+            const correctPass = "12345";
+
+            if (user === correctUser && pass === correctPass) {
+                sessionStorage.setItem("isLoggedIn", "true");
+                window.location.href = "admin_booking.html";
+            } else {
+                document.getElementById("error-message").innerText = "❌ Falscher Benutzername oder Passwort!";
+            }
+        }
+    </script>
+</body>
+</html>
