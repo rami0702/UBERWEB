@@ -1,18 +1,14 @@
-/* جعل الخلفية متجاوبة */
 body {
-    background-image: url('https://scontent-dus1-1.xx.fbcdn.net/v/t39.30808-6/302763380_514536423942724_8003227205248747218_n.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #f4f4f4;
     font-family: Arial, sans-serif;
-    color: white;
+    color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* تحسين التنقل */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     padding: 15px;
     border-radius: 10px;
 }
@@ -25,10 +21,6 @@ nav ul {
     gap: 15px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -36,32 +28,6 @@ nav ul li a {
     padding: 10px 15px;
 }
 
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-}
-
-/* تحسين الحجز */
-#booking {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 800px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-#calendar {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-/* تحسين الأزرار */
 button {
     background: #007bff;
     color: white;
@@ -69,106 +35,19 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
 }
 
 button:hover {
     background: #0056b3;
 }
 
-/* تحسين الأيقونات */
-.contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px;
-}
-
-.contact-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-.contact-icons img:hover {
-    transform: scale(1.2);
-}
-
-/* تحسين التنسيق للهواتف */
+/* تحسين العرض على الهواتف */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        text-align: center;
-        gap: 10px;
     }
-
+    
     button {
         width: 100%;
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    #booking {
-        width: 95%;
-        padding: 15px;
-    }
-
-    #calendar {
-        width: 100%;
     }
 }
-
-
-/* تحسين التصميم للهواتف */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #welcome h1 {
-        font-size: 20px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    .translation-info {
-        width: 90%;
-    }
-
-    .contact-icons img {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-/* تحسين التصميم لأجهزة الكمبيوتر */
-@media (min-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
-
-    #welcome h1 {
-        font-size: 28px;
-    }
-
-    .translation-info {
-        width: 70%;
-    }
-
-    .contact-icons img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
