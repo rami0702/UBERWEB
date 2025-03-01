@@ -1,40 +1,49 @@
-
-<script>
-    if (sessionStorage.getItem("isLoggedIn") !== "true") {
-        window.location.href = "login.html";
-    }
-</script>
 <!DOCTYPE html>
-<html lang="de" data-lang="de">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Terminverwaltung</title>
+    <title>إدارة المواعيد - مكتب الترجمة</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/admin_booking.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Admin - Terminverwaltung</h1>
+        <img src="https://via.placeholder.com/150x50.png?text=شعار+مكتب+الترجمة" alt="شعار مكتب الترجمة" class="header-image">
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="contact.html">الاتصال</a></li>
+                <li><a href="booking.html">حجز موعد</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="appointments">
-        <h2>Gebuchte Termine</h2>
+    <section id="appointments" class="container">
+        <h2>المواعيد المحجوزة</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Datum</th>
-                    <th>Zeit</th>
-                    <th>Aktionen</th>
+                    <th>الاسم</th>
+                    <th>البريد الإلكتروني</th>
+                    <th>التاريخ</th>
+                    <th>الوقت</th>
+                    <th>الإجراءات</th>
                 </tr>
             </thead>
             <tbody id="appointment-list">
-                <!-- Hier werden Termine geladen -->
+                <!-- هنا سيتم تحميل المواعيد -->
             </tbody>
         </table>
     </section>
 
-    <script src="admin_booking.js"></script>
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة | مكتب الترجمة</p>
+    </footer>
 </body>
 </html>
