@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
+    <title>تسجيل الدخول - مكتب الترجمة</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/login.js" defer></script>
 </head>
 <body>
-    <div class="login-container">
-        <h2>🔐 Admin Login</h2>
-        <input type="text" id="username" placeholder="Benutzername">
-        <input type="password" id="password" placeholder="Passwort">
-        <button onclick="login()">Login</button>
+    <header>
+        <img src="https://via.placeholder.com/150x50.png?text=شعار+مكتب+الترجمة" alt="شعار مكتب الترجمة" class="header-image">
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="contact.html">الاتصال</a></li>
+                <li><a href="booking.html">حجز موعد</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-container container">
+        <h2>🔐 تسجيل الدخول للمسؤول</h2>
+        <input type="text" id="username" placeholder="اسم المستخدم" required>
+        <input type="password" id="password" placeholder="كلمة المرور" required>
+        <button onclick="login()">تسجيل الدخول</button>
         <p id="error-message" style="color: red;"></p>
     </div>
 
-    <script>
-        function login() {
-            const user = document.getElementById("username").value;
-            const pass = document.getElementById("password").value;
-
-            // بيانات الدخول الصحيحة (يمكن تغييرها)
-            const correctUser = "admin";
-            const correctPass = "12345";
-
-            if (user === correctUser && pass === correctPass) {
-                sessionStorage.setItem("isLoggedIn", "true");
-                window.location.href = "admin_booking.html";
-            } else {
-                document.getElementById("error-message").innerText = "❌ Falscher Benutzername oder Passwort!";
-            }
-        }
-    </script>
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة | مكتب الترجمة</p>
+    </footer>
 </body>
 </html>
