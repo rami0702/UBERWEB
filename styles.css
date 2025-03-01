@@ -9,6 +9,7 @@ body {
     background-size: cover; /* تغطية الخلفية */
     background-position: center; /* توسيط الخلفية */
     background-repeat: no-repeat; /* منع تكرار الصورة */
+    background-attachment: fixed; /* تثبيت الخلفية */
     color: #333;
     min-height: 100vh; /* لجعل الخلفية تغطي الصفحة بالكامل */
     display: flex;
