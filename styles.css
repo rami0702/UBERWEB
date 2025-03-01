@@ -1,53 +1,66 @@
+/* General Styles */
 body {
-    background-color: #f4f4f4;
     font-family: Arial, sans-serif;
-    color: #333;
     text-align: center;
+    direction: rtl;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px;
-    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-image {
+    width: 150px; /* حجم الصورة */
+    height: auto;
+    margin-bottom: 10px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+    background: #444;
+    overflow: hidden;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
+    padding: 15px;
+    transition: background 0.3s;
 }
 
-button {
-    background: #007bff;
+nav ul li a:hover {
+    background: #555;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
     color: white;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
-button:hover {
-    background: #0056b3;
-}
-
-/* تحسين العرض على الهواتف */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-    
-    button {
-        width: 100%;
-    }
+footer p {
+    margin: 0;
 }
