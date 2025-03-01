@@ -5,12 +5,18 @@ body {
     direction: rtl;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url('https://source.unsplash.com/1600x900/?translation,language'); /* صورة خلفية */
+    background-size: cover; /* تغطية الخلفية */
+    background-position: center; /* توسيط الخلفية */
+    background-repeat: no-repeat; /* منع تكرار الصورة */
     color: #333;
+    min-height: 100vh; /* لجعل الخلفية تغطي الصفحة بالكامل */
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8); /* خلفية شبه شفافة */
     color: white;
     padding: 10px 0;
 }
@@ -24,7 +30,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    background: #444;
+    background: rgba(68, 68, 68, 0.8); /* خلفية شبه شفافة */
     overflow: hidden;
     margin: 0;
 }
@@ -42,25 +48,85 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #555;
+    background: rgba(85, 85, 85, 0.8); /* خلفية شبه شفافة */
 }
 
 .container {
     max-width: 800px;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* خلفية شبه شفافة */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* لجعل المحتوى يملأ المساحة المتاحة */
 }
 
 footer {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8); /* خلفية شبه شفافة */
     color: white;
     padding: 20px 0;
-    margin-top: 20px;
+    margin-top: auto; /* لجعل الفوتر يلتصق بالأسفل */
 }
 
 footer p {
     margin: 0;
+}
+
+/* استعلامات الوسائط للهواتف والأجهزة اللوحية */
+@media (max-width: 768px) {
+    .header-image {
+        width: 120px; /* تصغير حجم الصورة للشاشات الصغيرة */
+    }
+
+    nav ul li a {
+        padding: 10px; /* تقليل الحشو لقائمة التنقل */
+        font-size: 14px; /* تصغير حجم الخط */
+    }
+
+    .container {
+        padding: 15px; /* تقليل الحشو للعناصر الداخلية */
+    }
+
+    h1 {
+        font-size: 24px; /* تصغير حجم العنوان الرئيسي */
+    }
+
+    h2 {
+        font-size: 20px; /* تصغير حجم العناوين الفرعية */
+    }
+
+    p {
+        font-size: 14px; /* تصغير حجم النص */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-image {
+        width: 100px; /* تصغير حجم الصورة أكثر للهواتف الصغيرة */
+    }
+
+    nav ul li {
+        display: block; /* تحويل القائمة إلى عمودي على الهواتف */
+    }
+
+    nav ul li a {
+        padding: 8px; /* تقليل الحشو أكثر */
+        font-size: 12px; /* تصغير حجم الخط أكثر */
+    }
+
+    .container {
+        padding: 10px; /* تقليل الحشو أكثر */
+    }
+
+    h1 {
+        font-size: 20px; /* تصغير حجم العنوان الرئيسي أكثر */
+    }
+
+    h2 {
+        font-size: 18px; /* تصغير حجم العناوين الفرعية أكثر */
+    }
+
+    p {
+        font-size: 12px; /* تصغير حجم النص أكثر */
+    }
 }
