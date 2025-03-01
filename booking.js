@@ -11,18 +11,28 @@ document.addEventListener("DOMContentLoaded", function () {
             const time = document.getElementById("time").value;
 
             if (!name || !email || !date || !time) {
-                alert("Bitte alle Felder ausfüllen!");
+                alert("يرجى ملء جميع الحقول!");
                 return;
             }
 
-            const appointment = { name, email, date, time };
-            let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
-            appointments.push(appointment);
+            const appointment = {
+                name: name,
+                email: email,
+                date: date,
+                time: time
+            };
 
-            localStorage.setItem("appointments", JSON.stringify(appointments));
-
-            alert("Termin erfolgreich gebucht!");
-            bookingForm.reset();
+            // حفظ الموعد في Firebase
+            const newAppointmentRef = database.ref("appointments").push();
+            newAppointmentRef.set(appointment)
+                .then(() => {
+                    alert("تم حجز الموعد بنجاح!");
+                    bookingForm.reset();
+                })
+                .catch((error) => {
+                    console.error("Error saving appointment: ", error);
+                    alert("حدث خطأ أثناء حجز الموعد. يرجى المحاولة مرة أخرى.");
+                });
         });
     }
 });
