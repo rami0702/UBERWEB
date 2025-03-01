@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="de" data-lang="de">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حجز موعد - مكتب الترجمة</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="booking.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/booking.js" defer></script>
 </head>
 <body>
     <header>
+        <img src="https://via.placeholder.com/150x50.png?text=شعار+مكتب+الترجمة" alt="شعار مكتب الترجمة" class="header-image">
         <nav>
             <ul>
                 <li><a href="index.html">الرئيسية</a></li>
@@ -21,32 +23,24 @@
         </nav>
     </header>
 
-    <section id="booking">
+    <section id="booking" class="container">
         <h2>📅 حجز موعد</h2>
-        <p>يرجى اختيار التاريخ والوقت لحجز موعد:</p>
-        <input type="date" id="appointmentDate">
-        <input type="time" id="appointmentTime">
-        <button onclick="bookAppointment()">🔔 حجز الموعد</button>
+        <form id="booking-form">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" required>
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" required>
+            <label for="date">التاريخ:</label>
+            <input type="date" id="date" required>
+            <label for="time">الوقت:</label>
+            <input type="time" id="time" required>
+            <button type="submit">🔔 حجز الموعد</button>
+        </form>
         <p id="appointmentMessage"></p>
-
-        <h3>📋 مواعيد محجوزة</h3>
-        <div id="calendar"></div>
     </section>
 
     <footer>
-        <div class="contact-icons">
-            <a href="https://wa.me/YOUR_NUMBER" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
-            <a href="mailto:your_email@example.com">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="E-Mail">
-            </a>
-            <a href="https://www.instagram.com/yourprofile" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-            </a>
-        </div>
-        <p>&copy; 2025 جميع الحقوق محفوظة | مكتب سموح للترجمة</p>
+        <p>&copy; 2025 جميع الحقوق محفوظة لدى مكتب السيد هشام الطائي للترجمة</p>
     </footer>
-    <script src="booking.js"></script>
 </body>
 </html>
