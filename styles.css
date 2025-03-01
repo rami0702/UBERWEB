@@ -5,7 +5,7 @@ body {
     direction: rtl;
     margin: 0;
     padding: 0;
-    background-image: url('https://wejhatt.com/wp-content/uploads/2023/12/IMG_5823-1-620x330.jpeg/?translation,language'); /* صورة خلفية */
+    background-image: url('https://wejhatt.com/wp-content/uploads/2023/12/IMG_5823-1-620x330.jpeg'); /* صورة خلفية */
     background-size: cover; /* تغطية الخلفية */
     background-position: center; /* توسيط الخلفية */
     background-repeat: no-repeat; /* منع تكرار الصورة */
