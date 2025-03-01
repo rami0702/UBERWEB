@@ -1,71 +1,32 @@
 <!DOCTYPE html>
-<html lang="de" data-lang="de">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professionelle und beglaubigte Übersetzungen Deutsch-Arabisch in Deutschland. Ermächtigter Übersetzer für Dokumente und Urkunden.">
-    <title>Startseite - Übersetzungsbüro</title>
+    <title>الصفحة الرئيسية - مكتب الترجمة</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="translate.js" defer></script> <!-- ملف الجافاسكريبت للتحكم في الترجمة -->
 </head>
 <body>
     <header>
+        <img src="https://via.placeholder.com/150x50.png?text=شعار+مكتب+الترجمة" alt="شعار مكتب الترجمة" class="header-image">
         <nav>
             <ul>
-                <li><a href="about.html" data-de="Über uns" data-ar="من نحن">Über uns</a></li>
-                <li><a href="services.html" data-de="Dienstleistungen" data-ar="الخدمات">Dienstleistungen</a></li>
-                <li><a href="contact.html" data-de="Kontakt" data-ar="الاتصال">Kontakt</a></li>
-                <li><a href="booking.html" data-de="Termin buchen" data-ar="حجز موعد">Termin buchen</a></li>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="contact.html">الاتصال</a></li>
+                <li><a href="booking.html">حجز موعد</a></li>
             </ul>
-            <button id="language-toggle">🇩🇪 / 🇸🇦</button> <!-- زر تغيير اللغة -->
         </nav>
     </header>
 
-    <section id="welcome">
-        <img id="cover-image" src="https://source.unsplash.com/1600x900/?translation,office,documents" alt="Übersetzungsbüro Cover" style="width:100%; border-radius: 10px; margin-top: 20px;">
-        <h1 data-de="Willkommen im Übersetzungsbüro" data-ar="مرحبًا بكم في مكتب الترجمة">Willkommen im Übersetzungsbüro</h1>
-        <p data-de="Wir bieten professionelle, zuverlässige und beglaubigte Übersetzungsdienste in Deutschland an." 
-           data-ar="نحن نقدم خدمات ترجمة احترافية وموثوقة ومعتمدة في ألمانيا.">
-           Wir bieten professionelle, zuverlässige und beglaubigte Übersetzungsdienste in Deutschland an.
-        </p>
-        
-        <div class="translation-info">
-            <h2 data-de="Ermächtigter Übersetzer für Deutsch-Arabisch und umgekehrt!" 
-                data-ar="مترجم معتمد للألمانية والعربية والعكس!">
-                Ermächtigter Übersetzer für Deutsch-Arabisch und umgekehrt!
-            </h2>
-            <p data-de="Übersetzung aller Dokumente wie Personalausweise, Geburtsurkunden, Familienpässe, Zeugnisse etc." 
-               data-ar="ترجمة جميع الوثائق مثل بطاقات الهوية وشهادات الميلاد وجوازات العائلة والشهادات وغيرها.">
-               Übersetzung aller Dokumente wie Personalausweise, Geburtsurkunden, Familienpässe, Zeugnisse etc.
-            </p>
-        </div>
-
-        <button onclick="window.location.href='contact.html'" data-de="Kostenloses Angebot anfordern" 
-                data-ar="طلب عرض مجاني">Kostenloses Angebot anfordern</button>
+    <section id="welcome" class="container">
+        <h1>مرحبًا بكم في مكتب الترجمة</h1>
+        <p>نحن نقدم خدمات ترجمة احترافية وموثوقة ومعتمدة في ألمانيا.</p>
     </section>
 
     <footer>
-        <div class="contact-icons">
-            <a href="https://wa.me/YOUR_NUMBER" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
-            <a href="mailto:your_email@example.com">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="E-Mail">
-            </a>
-            <a href="https://www.instagram.com/yourprofile" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-            </a>
-            <a href="tel:+49123456789">
-                <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Telefon">
-            </a>
-        </div>
-        <p class="copyright" data-de="&copy; 2025 Alle Rechte vorbehalten | Übersetzungsbüro ..." 
-           data-ar="&copy; 2025 جميع الحقوق محفوظة | مكتب الترجمة ...">
-           &copy; 2025 Alle Rechte vorbehalten | Übersetzungsbüro ...
-        </p>
-
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" data-de="🔝 Nach oben" 
-                data-ar="🔝 إلى الأعلى">🔝 Nach oben</button>
+        <p>&copy; 2025 جميع الحقوق محفوظة | مكتب الترجمة</p>
     </footer>
 </body>
 </html>
